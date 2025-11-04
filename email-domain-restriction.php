@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Email Domain Restriction
- * Plugin URI: https://github.com/yourusername/email-domain-restriction
+ * Plugin URI: https://github.com/erikcaineolson/email-domain-restriction
  * Description: Whitelist email domains for user registration with email verification and comprehensive statistics dashboard.
  * Version: 1.0.0
- * Author: Your Name
- * Author URI: https://yourwebsite.com
+ * Author: Erik C. Olson <erik@erikcaineolson.com>
+ * Author URI: https://erikcaineolson.com
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: email-domain-restriction

@@ -200,7 +200,7 @@ A: By default, 30 days. You can adjust this in Settings.
 
 ## Support
 
-For support, please visit the [GitHub repository](https://github.com/yourusername/email-domain-restriction) or contact the plugin author.
+For support, please visit the [GitHub repository](https://github.com/erikcaineolson/email-domain-restriction) or contact the plugin author.
 
 ## License
 
