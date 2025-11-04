@@ -3,7 +3,7 @@
  * Plugin Name: Email Domain Restriction
  * Plugin URI: https://github.com/erikcaineolson/email-domain-restriction
  * Description: Whitelist email domains for user registration with email verification and comprehensive statistics dashboard.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Erik C. Olson <erik@erikcaineolson.com>
  * Author URI: https://erikcaineolson.com
  * License: GPL-2.0+
