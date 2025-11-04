@@ -1,0 +1,215 @@
+/**
+ * Dashboard styles for Email Domain Restriction plugin.
+ *
+ * @package Email_Domain_Restriction
+ */
+
+/* Dashboard Filters */
+.edr-dashboard-filters {
+    background: #fff;
+    padding: 15px 20px;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.edr-dashboard-filters form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.edr-dashboard-filters label {
+    font-weight: 600;
+}
+
+.edr-dashboard-filters select {
+    min-width: 150px;
+}
+
+/* Stats Cards */
+.edr-stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.edr-stat-card {
+    background: #fff;
+    border-left: 4px solid #0073aa;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.edr-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.edr-stat-card.edr-stat-success {
+    border-left-color: #46b450;
+}
+
+.edr-stat-card.edr-stat-danger {
+    border-left-color: #dc3232;
+}
+
+.edr-stat-card.edr-stat-info {
+    border-left-color: #00a0d2;
+}
+
+.edr-stat-icon {
+    font-size: 48px;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.edr-stat-icon .dashicons {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+}
+
+.edr-stat-content {
+    flex: 1;
+}
+
+.edr-stat-value {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.edr-stat-label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Dashboard Rows */
+.edr-dashboard-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.edr-dashboard-row.edr-single-column {
+    grid-template-columns: 1fr;
+}
+
+/* Chart Containers */
+.edr-chart-container {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.edr-chart-container.edr-chart-large {
+    grid-column: span 2;
+}
+
+.edr-chart-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.edr-chart-container canvas {
+    max-height: 400px;
+}
+
+/* Recent Activity */
+.edr-recent-activity {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.edr-recent-activity h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.edr-recent-activity table {
+    margin-top: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    .edr-dashboard-row {
+        grid-template-columns: 1fr;
+    }
+
+    .edr-chart-container.edr-chart-large {
+        grid-column: span 1;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .edr-stats-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .edr-dashboard-filters form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .edr-dashboard-filters select,
+    .edr-dashboard-filters button {
+        width: 100%;
+    }
+
+    .edr-stat-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .edr-dashboard-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading State */
+.edr-chart-loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.edr-chart-loading .dashicons {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Empty State */
+.edr-chart-empty {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
+
+.edr-chart-empty .dashicons {
+    font-size: 64px;
+    width: 64px;
+    height: 64px;
+    opacity: 0.3;
+}

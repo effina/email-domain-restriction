@@ -1,0 +1,111 @@
+/**
+ * Admin styles for Email Domain Restriction plugin.
+ *
+ * @package Email_Domain_Restriction
+ */
+
+/* General Styles */
+.edr-domains-section {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.edr-domains-section h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.edr-domains-section hr {
+    margin: 30px 0;
+}
+
+/* Status Badges */
+.edr-status {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.edr-status .dashicons {
+    font-size: 16px;
+    line-height: 1;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+.edr-status-allowed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.edr-status-blocked {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Domain List Table */
+.wp-list-table .dashicons {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.edr-user-agent {
+    display: inline-block;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Log Filters */
+.edr-log-filters .tablenav {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.edr-log-filters input[type="text"],
+.edr-log-filters input[type="date"],
+.edr-log-filters select {
+    margin-right: 5px;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .edr-log-filters .tablenav {
+        padding: 5px;
+    }
+
+    .edr-log-filters .alignleft.actions {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    .edr-log-filters .alignright.actions {
+        float: none;
+    }
+
+    .edr-log-filters input[type="text"],
+    .edr-log-filters input[type="date"],
+    .edr-log-filters select {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+}
+
+/* Success/Error Messages */
+.notice.notice-success,
+.notice.notice-error,
+.notice.notice-warning {
+    margin: 15px 0;
+}
+
+/* Bulk Import Section */
+.edr-domains-section input[type="file"] {
+    margin-bottom: 10px;
+}
