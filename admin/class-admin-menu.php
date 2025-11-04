@@ -11,10 +11,28 @@
 class EDR_Admin_Menu
 {
     /**
+     * Settings page instance.
+     *
+     * @var EDR_Settings_Page
+     */
+    private $settings_page;
+
+    /**
+     * Log viewer instance.
+     *
+     * @var EDR_Log_Viewer
+     */
+    private $log_viewer;
+
+    /**
      * Initialize admin menu hooks.
      */
     public function init()
     {
+        // Initialize settings page and log viewer early for form handling
+        $this->settings_page = new EDR_Settings_Page();
+        $this->log_viewer = new EDR_Log_Viewer();
+
         add_action('admin_menu', [$this, 'add_menu_pages']);
         add_action('admin_enqueue_scripts', [$this, 'enqueue_admin_assets']);
     }
@@ -98,8 +116,7 @@ class EDR_Admin_Menu
             wp_die(__('You do not have sufficient permissions to access this page.', 'email-domain-restriction'));
         }
 
-        $settings_page = new EDR_Settings_Page();
-        $settings_page->render_domains_tab();
+        $this->settings_page->render_domains_tab();
     }
 
     /**
@@ -111,8 +128,7 @@ class EDR_Admin_Menu
             wp_die(__('You do not have sufficient permissions to access this page.', 'email-domain-restriction'));
         }
 
-        $log_viewer = new EDR_Log_Viewer();
-        $log_viewer->render();
+        $this->log_viewer->render();
     }
 
     /**
@@ -124,8 +140,7 @@ class EDR_Admin_Menu
             wp_die(__('You do not have sufficient permissions to access this page.', 'email-domain-restriction'));
         }
 
-        $settings_page = new EDR_Settings_Page();
-        $settings_page->render_settings_tab();
+        $this->settings_page->render_settings_tab();
     }
 
     /**
