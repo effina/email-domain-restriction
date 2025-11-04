@@ -25,9 +25,21 @@ class EDR_Admin_Menu
     public function add_menu_pages()
     {
         // Main menu page (Dashboard)
-        add_options_page(
+        add_menu_page(
             __('Email Domain Restriction', 'email-domain-restriction'),
             __('Email Domain Restriction', 'email-domain-restriction'),
+            'manage_options',
+            'email-domain-restriction',
+            [$this, 'render_dashboard_page'],
+            'dashicons-shield',
+            80
+        );
+
+        // Dashboard submenu (duplicate of main menu)
+        add_submenu_page(
+            'email-domain-restriction',
+            __('Dashboard', 'email-domain-restriction'),
+            __('Dashboard', 'email-domain-restriction'),
             'manage_options',
             'email-domain-restriction',
             [$this, 'render_dashboard_page']
@@ -146,7 +158,7 @@ class EDR_Admin_Menu
         );
 
         // Enqueue dashboard assets on dashboard page
-        if (strpos($hook, 'email-domain-restriction') !== false && strpos($hook, 'edr-') === false) {
+        if (strpos($hook, 'toplevel_page_email-domain-restriction') !== false) {
             // Chart.js
             wp_enqueue_script(
                 'chartjs',
