@@ -4,6 +4,7 @@
  * Plugin URI: https://codeeffina.com/wordpress/plugins/email-domain-restriction
  * Description: Whitelist email domains for user registration with email verification and comprehensive statistics dashboard.
  * Version: 1.0.0
+ * Requires PHP: 8.3
  * Author: Erik C. Olson
  * Author URI: https://codeeffina.com
  * License: GPL-2.0+

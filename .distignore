@@ -1,0 +1,56 @@
+# Development files
+.git
+.github
+.gitignore
+.distignore
+
+# Documentation (not needed in distribution)
+README.md
+CHANGELOG.md
+PROJECT-COMPLETION-SUMMARY.md
+WOOCOMMERCE-INTEGRATION-TESTING.md
+BUDDYPRESS-INTEGRATION-TESTING.md
+ROLE-MAPPING-TESTING.md
+ANALYTICS-TESTING.md
+
+# Composer
+composer.json
+composer.lock
+
+# Node/NPM
+node_modules
+package.json
+package-lock.json
+yarn.lock
+
+# Tests
+tests
+phpunit.xml
+phpunit.xml.dist
+.phpunit.result.cache
+
+# Build/Deploy
+build
+deploy
+dist
+
+# IDE/Editor
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# PRO features (stripped for FREE version on WordPress.org)
+vendor/freemius
+includes/pro
+admin/pro
+includes/integrations/class-woocommerce-integration.php
+includes/integrations/class-buddypress-integration.php
