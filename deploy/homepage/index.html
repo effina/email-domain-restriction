@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Domain Restriction PRO - WordPress Plugin | CodeEffina</title>
+    <meta name="description" content="Professional WordPress plugin for restricting user registration with email domain whitelisting, advanced analytics, email validation, role mapping, WooCommerce & BuddyPress integration.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#0073aa"/>
+                    <path d="M20 10L12 18L20 26L28 18L20 10Z" fill="white"/>
+                    <path d="M12 22L20 30L28 22" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Email Domain Restriction <span class="pro-badge">PRO</span></span>
+            </div>
+            <nav class="nav">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#integrations">Integrations</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://github.com/codeeffina/email-domain-restriction" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Version 1.0.0 | FREE & PRO Versions Available</span>
+                <h1>Enterprise-Grade Email Domain Control for WordPress</h1>
+                <p class="hero-description">
+                    Restrict user registration to approved email domains with advanced analytics,
+                    email validation (ZeroBounce, Kickbox, Hunter.io), role mapping, and seamless
+                    WooCommerce, BuddyPress & Ultimate Member integration.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#pricing" class="btn btn-primary">
+                        View Pricing & Plans
+                    </a>
+                    <a href="https://codeeffina.com/wordpress/plugins/email-domain-restriction/releases/email-domain-restriction-latest.zip" class="btn btn-secondary">
+                        Download FREE Version
+                    </a>
+                </div>
+                <div class="requirements">
+                    <p><strong>Requirements:</strong> WordPress 5.0+ | PHP 7.4+ | MySQL 5.6+</p>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>15,000+</strong>
+                        <span>Lines of Code</span>
+                    </div>
+                    <div class="stat">
+                        <strong>4</strong>
+                        <span>Email Validation APIs</span>
+                    </div>
+                    <div class="stat">
+                        <strong>3</strong>
+                        <span>Major Integrations</span>
+                    </div>
+                    <div class="stat">
+                        <strong>10</strong>
+                        <span>Database Tables</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Powerful Features for Every Need</h2>
+            <p class="section-subtitle">Start with our FREE version, upgrade to PRO for advanced features</p>
+
+            <h3 class="feature-tier-title">FREE Version Features</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="20" stroke="#0073aa" stroke-width="2"/>
+                            <path d="M16 24L22 30L32 18" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Domain Whitelisting</h3>
+                    <p>Control which email domains can register. Use exact matches (example.com) or wildcards (*.example.com) for flexibility.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="12" width="32" height="24" rx="2" stroke="#0073aa" stroke-width="2"/>
+                            <path d="M8 16L24 26L40 16" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Email Verification</h3>
+                    <p>Automatically send verification emails to new users. Ensures valid email addresses and prevents spam registrations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 40V16L24 8L36 16V40H28V28H20V40H12Z" stroke="#0073aa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Basic Analytics</h3>
+                    <p>View registration statistics and track allowed vs blocked attempts on your dashboard.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="10" stroke="#0073aa" stroke-width="2"/>
+                            <path d="M30 30L38 38" stroke="#0073aa" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Registration Logging</h3>
+                    <p>Detailed logs of all registration attempts (allowed and blocked). Filter, search, and export to CSV for analysis.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="12" y="12" width="24" height="24" rx="2" stroke="#0073aa" stroke-width="2"/>
+                            <path d="M20 12V8M28 12V8M12 20H36" stroke="#0073aa" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Ultimate Member Integration</h3>
+                    <p>Full compatibility with Ultimate Member plugin. Works seamlessly with UM registration forms and email activation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 8V40M14 18H34M14 30H34" stroke="#0073aa" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Bulk Import/Export</h3>
+                    <p>Manage large domain lists easily with CSV import/export. Perfect for organizations with many approved domains.</p>
+                </div>
+            </div>
+
+            <h3 class="feature-tier-title pro-title">
+                <span class="pro-badge-inline">PRO</span> Exclusive Features
+            </h3>
+            <div class="features-grid">
+                <div class="feature-card pro-feature">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4L8 14V24C8 34 16 42 24 44C32 42 40 34 40 24V14L24 4Z" stroke="#9b59b6" stroke-width="2"/>
+                            <path d="M16 24L22 30L32 18" stroke="#9b59b6" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Email Validation APIs</h3>
+                    <p>Integrate with ZeroBounce, Kickbox, Hunter.io, or NeverBounce. Detect invalid, disposable, and risky emails automatically. Includes API connection testing.</p>
+                </div>
+
+                <div class="feature-card pro-feature">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="12" width="36" height="28" rx="2" stroke="#9b59b6" stroke-width="2"/>
+                            <path d="M6 20H42M14 28H22M14 32H18" stroke="#9b59b6" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Advanced Analytics Dashboard</h3>
+                    <p>Beautiful Chart.js visualizations: time-series trends, source breakdown, top domains, geographic distribution, conversion funnels. Export to CSV/PDF.</p>
+                </div>
+
+                <div class="feature-card pro-feature">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="18" r="10" stroke="#9b59b6" stroke-width="2"/>
+                            <circle cx="30" cy="30" r="10" stroke="#9b59b6" stroke-width="2"/>
+                            <path d="M25 25L28 28" stroke="#9b59b6" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Role-Based Mapping</h3>
+                    <p>Automatically assign WordPress roles based on email domains. Supports wildcards, priority system, conflict resolution. Import/Export mappings.</p>
+                </div>
+
+                <div class="feature-card pro-feature">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="14" height="14" rx="2" stroke="#9b59b6" stroke-width="2"/>
+                            <rect x="26" y="8" width="14" height="14" rx="2" stroke="#9b59b6" stroke-width="2"/>
+                            <rect x="8" y="26" width="14" height="14" rx="2" stroke="#9b59b6" stroke-width="2"/>
+                            <rect x="26" y="26" width="14" height="14" rx="2" stroke="#9b59b6" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>WooCommerce Integration</h3>
+                    <p>Validate registrations at checkout and My Account pages. Track sources, assign roles by domain, B2B mode for wholesale customers. Dashboard widget included.</p>
+                </div>
+
+                <div class="feature-card pro-feature">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="14" cy="14" r="8" stroke="#9b59b6" stroke-width="2"/>
+                            <circle cx="34" cy="14" r="8" stroke="#9b59b6" stroke-width="2"/>
+                            <circle cx="24" cy="34" r="8" stroke="#9b59b6" stroke-width="2"/>
+                            <path d="M20 20L16 28M28 20L32 28" stroke="#9b59b6" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>BuddyPress Integration</h3>
+                    <p>Validate BuddyPress registrations, group-level domain restrictions, member type auto-assignment, invitation tracking. Perfect for private communities.</p>
+                </div>
+
+                <div class="feature-card pro-feature">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="18" stroke="#9b59b6" stroke-width="2"/>
+                            <path d="M24 6V10M24 38V42M42 24H38M10 24H6M36 12L33 15M15 33L12 36M36 36L33 33M15 15L12 12" stroke="#9b59b6" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Geolocation & Country Blocking</h3>
+                    <p>Automatically detect user location via IP address. Allow or block registrations from specific countries. Includes caching for performance.</p>
+                </div>
+
+                <div class="feature-card pro-feature">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 24H18L22 14L26 34L30 24H40" stroke="#9b59b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Rate Limiting & Anti-Abuse</h3>
+                    <p>Prevent spam with domain and IP-based rate limiting. Configurable time windows and attempt thresholds. Automatic temporary blocking.</p>
+                </div>
+
+                <div class="feature-card pro-feature">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="10" width="28" height="28" rx="2" stroke="#9b59b6" stroke-width="2"/>
+                            <path d="M10 18H38M18 10V38" stroke="#9b59b6" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Webhook Notifications</h3>
+                    <p>Real-time event notifications via webhooks. HMAC signature verification for security. Track registration.allowed and registration.blocked events.</p>
+                </div>
+
+                <div class="feature-card pro-feature">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="14" width="32" height="22" rx="2" stroke="#9b59b6" stroke-width="2"/>
+                            <path d="M8 20H40M16 28H24" stroke="#9b59b6" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Scheduled Email Reports</h3>
+                    <p>Automatically send analytics reports via email (daily, weekly, monthly). Includes statistics breakdown and links to dashboard.</p>
+                </div>
+
+                <div class="feature-card pro-feature">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 18L24 6L36 18V38C36 39.1 35.1 40 34 40H14C12.9 40 12 39.1 12 38V18Z" stroke="#9b59b6" stroke-width="2"/>
+                            <path d="M20 40V26H28V40" stroke="#9b59b6" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Data Retention Policies</h3>
+                    <p>Configurable data retention (0-3650 days). Automated daily cleanup. Comply with privacy regulations like GDPR.</p>
+                </div>
+
+                <div class="feature-card pro-feature">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="10" width="28" height="28" rx="4" stroke="#9b59b6" stroke-width="2"/>
+                            <path d="M16 22L22 28L32 18" stroke="#9b59b6" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Audit Logging</h3>
+                    <p>Complete audit trail of all administrative actions. Track who changed what and when. Perfect for compliance and security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Section -->
+    <section id="integrations" class="integrations">
+        <div class="container">
+            <h2>Seamless Integrations</h2>
+            <p class="section-subtitle">Works perfectly with your favorite WordPress plugins</p>
+            <div class="integrations-grid">
+                <div class="integration-card">
+                    <h3>WooCommerce</h3>
+                    <p class="pro-tag">PRO</p>
+                    <p>Validate at checkout and My Account. B2B mode. Source tracking. Role assignment.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>BuddyPress</h3>
+                    <p class="pro-tag">PRO</p>
+                    <p>Registration validation. Group restrictions. Member type assignment. Invitation tracking.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>Ultimate Member</h3>
+                    <p class="free-tag">FREE & PRO</p>
+                    <p>Full UM compatibility. Works with all registration forms and email activation flows.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>ZeroBounce</h3>
+                    <p class="pro-tag">PRO</p>
+                    <p>Industry-leading email validation. Detect invalid, disposable, spam traps, abuse emails.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>Kickbox</h3>
+                    <p class="pro-tag">PRO</p>
+                    <p>Real-time email verification. Sendex scoring. Disposable and free email detection.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>Hunter.io</h3>
+                    <p class="pro-tag">PRO</p>
+                    <p>Email verification + enrichment. Domain reputation. Perfect for B2B validation.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>NeverBounce</h3>
+                    <p class="pro-tag">PRO</p>
+                    <p>Real-time + bulk validation. Catch-all detection. Competitive pricing.</p>
+                </div>
+                <div class="integration-card">
+                    <h3>Chart.js</h3>
+                    <p class="pro-tag">PRO</p>
+                    <p>Beautiful data visualizations. Interactive charts. Time-series, pie, bar charts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Simple, Transparent Pricing</h2>
+            <p class="section-subtitle">Choose the plan that's right for you</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>FREE</h3>
+                    <div class="price">
+                        <span class="amount">$0</span>
+                        <span class="period">forever</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>✓ Domain whitelisting (exact & wildcard)</li>
+                        <li>✓ Email verification</li>
+                        <li>✓ Basic analytics dashboard</li>
+                        <li>✓ Registration logging</li>
+                        <li>✓ Ultimate Member integration</li>
+                        <li>✓ Import/Export domains (CSV)</li>
+                        <li>✓ Community support</li>
+                    </ul>
+                    <a href="https://codeeffina.com/wordpress/plugins/email-domain-restriction/releases/email-domain-restriction-latest.zip" class="btn btn-secondary">Download FREE</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <h3>Starter</h3>
+                    <div class="price">
+                        <span class="amount">$79</span>
+                        <span class="period">per year</span>
+                    </div>
+                    <p class="sites-info">1 site license</p>
+                    <ul class="features-list">
+                        <li>✓ Everything in FREE</li>
+                        <li>✓ Email validation APIs (all 4 services)</li>
+                        <li>✓ Advanced analytics dashboard</li>
+                        <li>✓ WooCommerce integration</li>
+                        <li>✓ BuddyPress integration</li>
+                        <li>✓ Role-based mapping</li>
+                        <li>✓ Geolocation & country blocking</li>
+                        <li>✓ Rate limiting & anti-abuse</li>
+                        <li>✓ Webhook notifications</li>
+                        <li>✓ Scheduled reports</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+                    <a href="https://codeeffina.com/buy/email-domain-restriction-pro/?plan=starter" class="btn btn-primary">Buy Starter</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Professional</h3>
+                    <div class="price">
+                        <span class="amount">$149</span>
+                        <span class="period">per year</span>
+                    </div>
+                    <p class="sites-info">5 site licenses</p>
+                    <ul class="features-list">
+                        <li>✓ Everything in Starter</li>
+                        <li>✓ Use on up to 5 sites</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ Advanced customization</li>
+                    </ul>
+                    <a href="https://codeeffina.com/buy/email-domain-restriction-pro/?plan=professional" class="btn btn-secondary">Buy Professional</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Agency</h3>
+                    <div class="price">
+                        <span class="amount">$299</span>
+                        <span class="period">per year</span>
+                    </div>
+                    <p class="sites-info">Unlimited sites</p>
+                    <ul class="features-list">
+                        <li>✓ Everything in Professional</li>
+                        <li>✓ Unlimited site licenses</li>
+                        <li>✓ White-label options</li>
+                        <li>✓ Premium support</li>
+                        <li>✓ Early access to new features</li>
+                    </ul>
+                    <a href="https://codeeffina.com/buy/email-domain-restriction-pro/?plan=agency" class="btn btn-secondary">Buy Agency</a>
+                </div>
+            </div>
+            <p class="pricing-note">All PRO plans include 1 year of updates and support. Automatic renewals. Cancel anytime.</p>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2>See It In Action</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <img src="https://codeeffina.com/wordpress/plugins/email-domain-restriction/assets/screenshots/screenshot-1.png" alt="Advanced Analytics Dashboard" loading="lazy">
+                    <p>Advanced Analytics Dashboard with Chart.js visualizations (PRO)</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="https://codeeffina.com/wordpress/plugins/email-domain-restriction/assets/screenshots/screenshot-2.png" alt="Role Mapping Interface" loading="lazy">
+                    <p>Role Mapping with wildcard support and conflict resolution (PRO)</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="https://codeeffina.com/wordpress/plugins/email-domain-restriction/assets/screenshots/screenshot-3.png" alt="Email Validation Settings" loading="lazy">
+                    <p>Email Validation API Configuration (PRO)</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="https://codeeffina.com/wordpress/plugins/email-domain-restriction/assets/screenshots/screenshot-4.png" alt="Domain Whitelist Management" loading="lazy">
+                    <p>Domain Whitelist Management (FREE & PRO)</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="https://codeeffina.com/wordpress/plugins/email-domain-restriction/assets/screenshots/screenshot-5.png" alt="Registration Log Viewer" loading="lazy">
+                    <p>Registration Log with Advanced Filtering (FREE & PRO)</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="https://codeeffina.com/wordpress/plugins/email-domain-restriction/assets/screenshots/screenshot-6.png" alt="WooCommerce Integration" loading="lazy">
+                    <p>WooCommerce Integration Settings (PRO)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="installation">
+        <div class="container">
+            <h2>Easy Installation</h2>
+            <div class="installation-content">
+                <div class="install-method">
+                    <h3>FREE Version Installation</h3>
+                    <ol>
+                        <li>Download the <a href="https://codeeffina.com/wordpress/plugins/email-domain-restriction/releases/email-domain-restriction-latest.zip">FREE version</a></li>
+                        <li>Go to WordPress Admin → Plugins → Add New</li>
+                        <li>Click "Upload Plugin" at the top</li>
+                        <li>Select the ZIP file and click "Install Now"</li>
+                        <li>Click "Activate Plugin"</li>
+                    </ol>
+                </div>
+
+                <div class="install-method">
+                    <h3>PRO Version Installation</h3>
+                    <ol>
+                        <li><a href="#pricing">Purchase a PRO license</a></li>
+                        <li>Download PRO version from your account</li>
+                        <li>Install and activate like the FREE version</li>
+                        <li>Enter your license key in Settings → License</li>
+                        <li>PRO features activate automatically</li>
+                    </ol>
+                </div>
+
+                <div class="install-method">
+                    <h3>Initial Setup</h3>
+                    <ol>
+                        <li>Go to Email Domain Restriction in the admin menu</li>
+                        <li>Click "Domain Whitelist" to add approved domains</li>
+                        <li>Configure settings in the Settings tab</li>
+                        <li>Test with whitelisted and non-whitelisted emails</li>
+                        <li>(PRO) Configure integrations and advanced features</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>What's the difference between FREE and PRO?</h3>
+                    <p>The FREE version provides domain whitelisting, basic analytics, and registration logging. PRO adds advanced analytics with Chart.js visualizations, email validation APIs (ZeroBounce, Kickbox, Hunter.io, NeverBounce), role-based mapping, WooCommerce & BuddyPress integrations, geolocation, webhooks, and more. See the <a href="#pricing">pricing section</a> for full comparison.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Which email validation service should I use?</h3>
+                    <p>All four services (ZeroBounce, Kickbox, Hunter.io, NeverBounce) are excellent. ZeroBounce offers the most comprehensive validation, Kickbox is fast and reliable, Hunter.io is great for B2B, and NeverBounce has competitive pricing. You can test connections to all services and choose your preferred one.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I use wildcards for subdomains?</h3>
+                    <p>Yes! Use <code>*.example.com</code> to allow all subdomains like <code>user@sub.example.com</code>, <code>user@another.example.com</code>, etc. Works in both FREE and PRO versions.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Does this work with WooCommerce and BuddyPress?</h3>
+                    <p>Yes! PRO version includes full WooCommerce integration (checkout + My Account validation, B2B mode, role assignment) and BuddyPress integration (registration validation, group-level restrictions, member type assignment).</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How does role-based mapping work?</h3>
+                    <p>PRO feature: You can map email domains to WordPress roles. For example, <code>@company.com</code> → Editor, <code>*.partners.com</code> → Contributor. Supports wildcards, priorities, and automatic conflict resolution when multiple patterns match.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I block registrations from specific countries?</h3>
+                    <p>Yes! PRO version includes geolocation with allow/block modes. You can create a whitelist of allowed countries or a blacklist of blocked countries. Uses IP address detection with caching for performance.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How does rate limiting work?</h3>
+                    <p>PRO feature: Prevents spam by limiting registration attempts per domain and per IP address. Configure time windows (e.g., 1 hour) and maximum attempts (e.g., 5 attempts). Automatic temporary blocking when limits exceeded.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What are webhooks used for?</h3>
+                    <p>PRO feature: Get real-time notifications when registrations are allowed or blocked. Send to your own endpoints or integrate with services like Slack, Discord, Zapier. Includes HMAC signature verification for security.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I export analytics data?</h3>
+                    <p>Yes! PRO version lets you export analytics to CSV or PDF. Also includes scheduled email reports (daily/weekly/monthly) sent automatically to specified addresses.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Does this work on multisite?</h3>
+                    <p>Yes, it works on both single-site and multisite WordPress installations. Each site requires its own license for PRO features.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What's your refund policy?</h3>
+                    <p>We offer a 30-day money-back guarantee on all PRO purchases. If you're not satisfied, contact us for a full refund within 30 days of purchase.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do I get updates and support?</h3>
+                    <p>All PRO licenses include 1 year of updates and priority support. After that, you can renew annually (usually at a discount) to continue receiving updates and support. The plugin continues to work even if you don't renew.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Take Control of Your WordPress Registration?</h2>
+            <p>Join hundreds of organizations using Email Domain Restriction to secure their WordPress sites.</p>
+            <div class="cta-buttons">
+                <a href="#pricing" class="btn btn-primary btn-large">
+                    View PRO Plans
+                </a>
+                <a href="https://codeeffina.com/wordpress/plugins/email-domain-restriction/releases/email-domain-restriction-latest.zip" class="btn btn-secondary btn-large">
+                    Try FREE Version
+                </a>
+            </div>
+            <p class="version-info">Version 1.0.0 | FREE & PRO Versions | GPL-2.0+ License</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Email Domain Restriction</h4>
+                    <p>Enterprise-grade email domain control for WordPress</p>
+                    <p class="copyright">A WordPress plugin by <a href="https://codeeffina.com">CodeEffina</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#integrations">Integrations</a></li>
+                        <li><a href="https://codeeffina.com/wordpress/plugins/email-domain-restriction/releases/email-domain-restriction-latest.zip">Download FREE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#installation">Installation Guide</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="https://github.com/codeeffina/email-domain-restriction">GitHub Repository</a></li>
+                        <li><a href="https://github.com/codeeffina/email-domain-restriction/issues">Report Issues</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="https://codeeffina.com/support">Get Support</a></li>
+                        <li><a href="https://codeeffina.com/docs/email-domain-restriction">Documentation</a></li>
+                        <li><a href="https://codeeffina.com/account">My Account</a></li>
+                        <li><a href="https://codeeffina.com">CodeEffina</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeEffina. Licensed under GPL-2.0+ | <a href="https://codeeffina.com/privacy">Privacy Policy</a> | <a href="https://codeeffina.com/terms">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .pro-badge {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .pro-badge-inline {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .pro-feature {
+            border-top: 3px solid #9b59b6;
+        }
+
+        .pro-feature .feature-icon svg path,
+        .pro-feature .feature-icon svg circle,
+        .pro-feature .feature-icon svg rect {
+            stroke: #9b59b6;
+        }
+
+        .feature-tier-title {
+            margin: 60px 0 30px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .pro-title {
+            color: #9b59b6;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 32px;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .stat span {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
+
+        .integrations {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .integrations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .integration-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .integration-card h3 {
+            margin: 0 0 10px;
+        }
+
+        .pro-tag, .free-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .pro-tag {
+            background: #9b59b6;
+            color: white;
+        }
+
+        .free-tag {
+            background: #0073aa;
+            color: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 40px 30px;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: #0073aa;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 115, 170, 0.2);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0073aa;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .price {
+            margin: 20px 0;
+        }
+
+        .price .amount {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1d2327;
+        }
+
+        .price .period {
+            display: block;
+            color: #646970;
+            margin-top: 5px;
+        }
+
+        .sites-info {
+            color: #646970;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f1;
+        }
+
+        .pricing-note {
+            text-align: center;
+            margin-top: 30px;
+            color: #646970;
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+    </style>
+</body>
+</html>

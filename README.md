@@ -32,10 +32,60 @@ A comprehensive WordPress plugin that restricts user registration to whitelisted
 
 ## Installation
 
-1. Upload the `email-domain-restriction` folder to `/wp-content/plugins/`
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Navigate to Settings > Email Domain Restriction
-4. Add your whitelisted domains
+### Automatic Installation (Recommended)
+
+1. Download the latest version from [https://codeeffina.com/wordpress/plugins/email-domain-restriction](https://codeeffina.com/wordpress/plugins/email-domain-restriction)
+2. In WordPress admin, go to Plugins > Add New
+3. Click "Upload Plugin" at the top
+4. Select the downloaded ZIP file and click "Install Now"
+5. Click "Activate Plugin"
+
+### Manual Installation
+
+1. Download the latest version from [https://codeeffina.com/wordpress/plugins/email-domain-restriction](https://codeeffina.com/wordpress/plugins/email-domain-restriction)
+2. Upload the `email-domain-restriction` folder to `/wp-content/plugins/`
+3. Activate the plugin through the 'Plugins' menu in WordPress
+
+### Initial Setup
+
+1. Navigate to Email Domain Restriction in the admin menu
+2. Click "Domain Whitelist" to add your first approved domain
+3. Configure settings as needed in the Settings tab
+4. Test registration with a whitelisted and non-whitelisted email
+
+## Updates
+
+This plugin includes automatic update checking from CodeEffina's update server.
+
+### How Updates Work
+
+- The plugin checks for updates every 12 hours
+- Update notifications appear in WordPress admin (Plugins page and Dashboard)
+- One-click updates from the WordPress admin interface
+- No WordPress.org account or repository needed
+
+### Update Process
+
+1. When a new version is available, you'll see an update notification
+2. Click "Update Now" on the Plugins page
+3. WordPress downloads and installs the update automatically
+4. Your settings and data are preserved during updates
+
+### Manual Updates
+
+If automatic updates don't work:
+
+1. Download the latest version from [https://codeeffina.com/wordpress/plugins/email-domain-restriction](https://codeeffina.com/wordpress/plugins/email-domain-restriction)
+2. Deactivate the current plugin
+3. Delete the old plugin files
+4. Upload and activate the new version
+5. Your settings and data will be preserved (stored in database)
+
+### Update Server
+
+- Update metadata: `https://codeeffina.com/wordpress/plugins/email-domain-restriction/metadata/info.json`
+- Update checks use the [Plugin Update Checker](https://github.com/YahnisElsts/plugin-update-checker) library
+- Hosted on Amazon S3 for reliability and performance
 
 ## Usage
 
@@ -198,9 +248,41 @@ A: By default, 30 days. You can adjust this in Settings.
 - Bulk import/export
 - Multisite compatible
 
+## Developer Documentation
+
+### Deploying Updates
+
+For information on deploying plugin updates to S3, see [deploy/S3-DEPLOYMENT-GUIDE.md](deploy/S3-DEPLOYMENT-GUIDE.md).
+
+This guide covers:
+- Setting up S3 bucket and CloudFront
+- Uploading releases and metadata
+- Configuring automatic updates
+- Troubleshooting update issues
+
+### Plugin Structure
+
+```
+email-domain-restriction/
+├── admin/                      # Admin UI components
+├── includes/                   # Core plugin classes
+│   ├── integrations/          # Third-party integrations (Ultimate Member)
+│   └── class-updater.php      # Custom update system
+├── vendor/                     # Third-party libraries
+│   └── plugin-update-checker/ # Update checker library
+├── deploy/                     # Deployment files (not included in distribution)
+│   ├── homepage/              # Plugin homepage HTML/CSS
+│   ├── metadata/              # Update metadata (info.json)
+│   └── S3-DEPLOYMENT-GUIDE.md # Deployment documentation
+└── email-domain-restriction.php # Main plugin file
+```
+
 ## Support
 
-For support, please visit the [GitHub repository](https://github.com/erikcaineolson/email-domain-restriction) or contact the plugin author.
+For support, please visit:
+- Plugin homepage: [https://codeeffina.com/wordpress/plugins/email-domain-restriction](https://codeeffina.com/wordpress/plugins/email-domain-restriction)
+- GitHub repository: [https://github.com/erikcaineolson/email-domain-restriction](https://github.com/erikcaineolson/email-domain-restriction)
+- Email: Contact via CodeEffina website
 
 ## License
 
@@ -210,5 +292,6 @@ This plugin is licensed under the GPL-2.0+ license.
 
 Built with:
 - WordPress Plugin API
-- Chart.js for visualizations
+- [Chart.js](https://www.chartjs.org/) for analytics visualizations
+- [Plugin Update Checker](https://github.com/YahnisElsts/plugin-update-checker) by Yahnis Elsts for custom updates
 - Love and coffee

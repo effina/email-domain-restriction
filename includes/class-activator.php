@@ -45,6 +45,12 @@ class EDR_Activator
 
         // Store plugin version
         update_option('edr_plugin_version', EDR_VERSION);
+
+        // Activate PRO features if available
+        if (file_exists(dirname(__FILE__) . '/pro/class-pro-activator.php')) {
+            require_once dirname(__FILE__) . '/pro/class-pro-activator.php';
+            EDR_Pro_Activator::activate();
+        }
     }
 
     /**

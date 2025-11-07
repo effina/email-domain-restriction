@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Email Domain Restriction
- * Plugin URI: https://github.com/erikcaineolson/email-domain-restriction
+ * Plugin URI: https://codeeffina.com/wordpress/plugins/email-domain-restriction
  * Description: Whitelist email domains for user registration with email verification and comprehensive statistics dashboard.
- * Version: 1.1.0
- * Author: Erik C. Olson <erik@erikcaineolson.com>
- * Author URI: https://erikcaineolson.com
+ * Version: 1.0.0
+ * Author: Erik C. Olson
+ * Author URI: https://codeeffina.com
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: email-domain-restriction
@@ -92,6 +92,11 @@ function run_email_domain_restriction()
     $um_integration = new EDR_Ultimate_Member_Integration();
     $um_integration->init();
 
+    // Initialize update checker
+    require_once EDR_PLUGIN_DIR . 'includes/class-updater.php';
+    $updater = new EDR_Updater();
+    $updater->init();
+
     // Load admin components if in admin area
     if (is_admin()) {
         require_once EDR_PLUGIN_DIR . 'admin/class-admin-menu.php';
@@ -102,5 +107,32 @@ function run_email_domain_restriction()
         $admin_menu = new EDR_Admin_Menu();
         $admin_menu->init();
     }
+
+    // Initialize PRO features if available
+    if (file_exists(EDR_PLUGIN_DIR . 'includes/pro/class-pro-features.php')) {
+        require_once EDR_PLUGIN_DIR . 'includes/pro/class-pro-features.php';
+        EDR_Pro_Features::init();
+    }
 }
 add_action('plugins_loaded', 'run_email_domain_restriction');
+
+/**
+ * Helper function to check if PRO is active
+ *
+ * @return bool
+ */
+function edr_is_pro_active()
+{
+    return class_exists('EDR_Pro_Features') && EDR_Pro_Features::is_pro_active();
+}
+
+/**
+ * Get Freemius instance
+ *
+ * @return Freemius|null
+ */
+function edr_freemius()
+{
+    global $edr_freemius;
+    return $edr_freemius;
+}

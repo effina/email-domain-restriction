@@ -1,0 +1,106 @@
+/**
+ * Role Mappings Admin Styles
+ *
+ * @package Email_Domain_Restriction
+ */
+
+/* Spinning animation for loading states */
+.dashicons.spin {
+    animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* Table responsive */
+@media screen and (max-width: 782px) {
+    .edr-mappings-tools {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .edr-tools-left,
+    .edr-tools-right {
+        width: 100%;
+    }
+
+    .edr-modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+}
+
+/* Better button spacing */
+.edr-mappings-table .column-actions {
+    white-space: nowrap;
+}
+
+.edr-mappings-table .column-actions .button {
+    margin-right: 5px;
+}
+
+/* Improve checkbox column */
+.edr-mappings-table .check-column {
+    width: 2.2em;
+    padding: 8px 0 0 3px;
+}
+
+/* Priority column */
+.edr-mappings-table .column-priority {
+    width: 100px;
+    text-align: center;
+}
+
+/* Actions column */
+.edr-mappings-table .column-actions {
+    width: 180px;
+}
+
+/* Form validation */
+.edr-role-mapping-form input:invalid,
+.edr-role-mapping-form select:invalid {
+    border-color: #d63638;
+}
+
+/* Test results styling */
+#edr-test-results table {
+    margin-top: 15px;
+}
+
+#edr-test-results th {
+    width: 150px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Modal improvements */
+.edr-modal {
+    backdrop-filter: blur(2px);
+}
+
+.edr-test-form {
+    margin: 20px 0;
+}
+
+.edr-test-form input {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Empty state improvements */
+.edr-empty-state h2 {
+    color: #50575e;
+    margin-bottom: 10px;
+}
+
+.edr-empty-state p {
+    color: #646970;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
